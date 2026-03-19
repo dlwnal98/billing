@@ -4,7 +4,7 @@ import type { NextRequest } from 'next/server'
 
 const protectedRoutes = ['/', '/issue', '/history', '/clients', '/mypage']
 
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   const res = NextResponse.next()
 
   const supabase = createServerClient(
