@@ -51,7 +51,7 @@ export default function LoginPage() {
         setErrors({ general: "이메일 또는 비밀번호가 올바르지 않습니다." })
         return
       }
-      
+
       router.push("/")
       router.refresh()
     } catch (err) {
@@ -99,11 +99,10 @@ export default function LoginPage() {
                 if (errors.email) setErrors((prev) => ({ ...prev, email: undefined }))
               }}
               placeholder="이메일을 입력해 주세요"
-              className={`w-full px-4 py-3 text-lg border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors ${
-                errors.email 
-                  ? "border-red-400 bg-red-50" 
+              className={`w-full px-4 py-3 text-lg border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors ${errors.email
+                  ? "border-red-400 bg-red-50"
                   : "border-gray-300 bg-white hover:border-gray-400"
-              }`}
+                }`}
               autoComplete="email"
             />
             {errors.email && (
@@ -126,11 +125,10 @@ export default function LoginPage() {
                   if (errors.password) setErrors((prev) => ({ ...prev, password: undefined }))
                 }}
                 placeholder="비밀번호를 입력하세요"
-                className={`w-full px-4 py-3 pr-12 text-lg border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors ${
-                  errors.password 
-                    ? "border-red-400 bg-red-50" 
+                className={`w-full px-4 py-3 pr-12 text-lg border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors ${errors.password
+                    ? "border-red-400 bg-red-50"
                     : "border-gray-300 bg-white hover:border-gray-400"
-                }`}
+                  }`}
                 autoComplete="current-password"
               />
               <button

@@ -3,14 +3,14 @@ import { Noto_Sans_KR } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const notoSansKR = Noto_Sans_KR({ 
+const notoSansKR = Noto_Sans_KR({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-noto-sans-kr",
 })
 
 export const metadata: Metadata = {
-  title: '세금계산서 발행',
+  title: '',
   description: '간편하게 전자세금계산서를 발행하고 관리하세요.',
   generator: 'v0.app',
   icons: {
